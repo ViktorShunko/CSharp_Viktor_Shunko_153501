@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using t3;
+using System;
 
 namespace TestProject3
 {
@@ -9,7 +10,12 @@ namespace TestProject3
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(0, DateService.duration(1,1,1,1,1,1));
+            DateTime current = DateTime.Today;
+            int year = current.Year;
+            int month = current.Month;
+            int day = current.Day;
+
+            Assert.AreEqual(738259, DateService.duration(1,1,1,year,month,day));
         }
         [TestMethod]
         public void TestMethod2()

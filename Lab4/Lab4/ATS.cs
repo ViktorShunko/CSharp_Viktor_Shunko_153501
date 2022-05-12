@@ -8,14 +8,14 @@ namespace Lab4
 {
     public class ATS
     {
-        private static ATS ats;
+        public static ATS ats;
         private Tarif tar;
 
         private int number = 0;
         private double abonent_price = 30.0;
         private string name = "My ATS";
 
-        public ATS()
+        private ATS()
         {
         }
         public double AbonentPriceAll()
